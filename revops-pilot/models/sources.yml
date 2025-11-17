@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: hubspot_raw
+    tables:
+      - name: raw_hubspot_deals
+        description: "Replicated HubSpot deals table"
+  - name: sheets_raw
+    tables:
+      - name: raw_sheets_pipeline_sheet
+        description: "Manual pipeline sheet exported to a table"

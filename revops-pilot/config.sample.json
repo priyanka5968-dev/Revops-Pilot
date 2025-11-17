@@ -1,0 +1,12 @@
+{
+  "database_url": "postgresql://user:password@host:5432/dbname",
+  "clients": [
+    {
+      "client_name": "Acme SaaS",
+      "schema": "acme_schema",
+      "pipeline_table": "canonical_pipeline"
+    }
+  ],
+  "slack_webhook": "https://hooks.slack.com/services/T000/B000/XXX",
+  "openai_model": "gpt-4o-mini"
+}

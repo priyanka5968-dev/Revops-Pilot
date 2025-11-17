@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.env
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyd
+*.pyo
+
+# Distribution / packaging
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+
+# SQLite/duckdb and other local db
+*.db
+*.sqlite
+*.sqlite3
+revops_pilot.duckdb
+
+# DBT
+target/
+. dbt/*
+profiles.yml
+profiles_postgres_env.yml
+profiles_postgres_template.yml
+profiles_sqlite.yml
+
+# Others
+*.env
+.env*
+
+# OneDrive / local OS artifacts
+~$*

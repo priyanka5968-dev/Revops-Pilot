@@ -1,0 +1,36 @@
+# dbt sources examples for revops-pilot
+
+# Postgres example
+# Place in your dbt project's models/ or models/sources/ folder and update schema/database names as needed.
+version: 2
+
+sources:
+  - name: hubspot_raw
+    database: your_database_name
+    schema: raw_hubspot
+    tables:
+      - name: deals
+        description: "Replicated HubSpot deals table (Postgres)"
+  - name: sheets_raw
+    database: your_database_name
+    schema: raw_sheets
+    tables:
+      - name: pipeline_sheet
+        description: "Manual pipeline sheet exported to a Postgres table"
+
+# BigQuery example (use project and dataset fields)
+# For BigQuery, place in models/ and set source.yml accordingly in your project
+#
+# sources:
+#   - name: hubspot_raw
+#     project: your_gcp_project
+#     dataset: raw_hubspot
+#     tables:
+#       - name: deals
+#         description: "Replicated HubSpot deals table (BigQuery)"
+#   - name: sheets_raw
+#     project: your_gcp_project
+#     dataset: raw_sheets
+#     tables:
+#       - name: pipeline_sheet
+#         description: "Manual pipeline sheet exported to BigQuery"

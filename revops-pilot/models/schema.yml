@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: canonical_pipeline
+    description: "Canonical pipeline model combining HubSpot and Sheets sources"
+    columns:
+      - name: deal_id
+        description: "Unique ID for the deal (source-specific)"
+        tests:
+          - not_null
+          - unique
+      - name: name
+        description: "Deal name"
+        tests:
+          - not_null
+      - name: owner_id
+        description: "Owner identifier (email or user_id)"
+      - name: amount
+        description: "Deal amount (numeric)"
+        tests:
+          - not_null
+      - name: canonical_stage
+        description: "Standardized stage enum"
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - unspecified
+                - qualification
+                - evaluation
+                - proposal
+                - closed_won
+                - closed_lost
+      - name: close_date
+        description: "Expected close date"

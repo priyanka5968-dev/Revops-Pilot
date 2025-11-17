@@ -1,0 +1,6 @@
+sqlalchemy
+pandas
+requests
+openai
+psycopg2-binary
+prefect
